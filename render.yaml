@@ -1,0 +1,40 @@
+services:
+-   type: web
+    name: bp_test
+    runtime: node
+    # repo: https://github.com/alexwbi88/express-hello-world.git
+    # scaling:
+      # minInstances: 1
+      # maxInstances: 3
+      # targetMemoryPercent: 60 # optional if targetCPUPercent is set
+      # targetCPUPercent: 60 # optional if targetMemory is set
+    buildCommand: yarn
+    startCommand: node app.js
+    plan: free
+    autoDeploy: false # optional
+-   type: pserv
+    name: bp_test_private
+    runtime: node
+    # repo: https://github.com/alexwbi88/express-hello-world.git
+    # scaling:
+      # minInstances: 1
+      # maxInstances: 3
+      # targetMemoryPercent: 60 # optional if targetCPUPercent is set
+      # targetCPUPercent: 60 # optional if targetMemory is set
+    buildCommand: yarn
+    startCommand: node app.js
+    plan: starter
+    autoDeploy: false # optional
+-   type: web
+    name: bp_test2
+    runtime: node
+    # repo: https://github.com/alexwbi88/express-hello-world.git
+    # scaling:
+      # minInstances: 1
+      # maxInstances: 3
+      # targetMemoryPercent: 60 # optional if targetCPUPercent is set
+      # targetCPUPercent: 60 # optional if targetMemory is set
+    buildCommand: yarn
+    startCommand: node app.js
+    plan: starter
+    autoDeploy: false # optional
