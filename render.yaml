@@ -1,8 +1,10 @@
+previewsEnabled: false
 services:
 -   type: web
     name: bp_test
     runtime: node
-    # repo: https://github.com/alexwbi88/express-hello-world.git
+    repo: https://github.com/alexwbi88/express-hello-world.git
+    branch: main
     # scaling:
       # minInstances: 1
       # maxInstances: 3
@@ -35,6 +37,8 @@ services:
 -   type: web
     name: bp_test2
     runtime: node
+    repo: https://github.com/alexwbi88/express-hello-world.git
+    branch: main
     # repo: https://github.com/alexwbi88/express-hello-world.git
     # scaling:
       # minInstances: 1
@@ -48,6 +52,8 @@ services:
 -   type: web
     name: new_web_service_test
     runtime: node
+    repo: https://github.com/alexwbi88/express-hello-world.git
+    branch: main
     # repo: https://github.com/alexwbi88/express-hello-world.git
     # scaling:
       # minInstances: 1
