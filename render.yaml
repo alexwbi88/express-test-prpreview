@@ -12,7 +12,6 @@ services:
     startCommand: node app.js
     plan: free
     autoDeploy: false # optional
-     # A Redis instance
   - type: redis
     name: lightning
     ipAllowList: # required
