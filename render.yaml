@@ -10,7 +10,7 @@ services:
       # targetCPUPercent: 60 # optional if targetMemory is set
     buildCommand: yarn
     startCommand: node app.js
-    plan: standard
+    plan: free
     autoDeploy: false # optional
 -   type: pserv
     name: bp_test_private
@@ -23,7 +23,7 @@ services:
       # targetCPUPercent: 60 # optional if targetMemory is set
     buildCommand: yarn
     startCommand: node app.js
-    plan: starter
+    plan: free
     autoDeploy: false # optional
 -   type: web
     name: bp_test2
@@ -36,7 +36,7 @@ services:
       # targetCPUPercent: 60 # optional if targetMemory is set
     buildCommand: yarn
     startCommand: node app.js
-    plan: standard
+    plan: free
     autoDeploy: false # optional
 -   type: web
     name: new_web_service_test
