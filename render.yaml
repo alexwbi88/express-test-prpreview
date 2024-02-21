@@ -12,7 +12,7 @@ services:
     startCommand: node app.js
     plan: free
     autoDeploy: false # optional
-  - type: redis
+-   type: redis
     name: lightning
     ipAllowList: # required
       - source: 0.0.0.0/0
