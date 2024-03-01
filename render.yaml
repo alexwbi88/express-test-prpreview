@@ -11,6 +11,8 @@ services:
     envVars:
       - key: STRIPE_API_KEY
         value: Z2V0IG91dHRhIGhlcmUhCg
+      - key: ENV
+        value: foo
       # - key: DB_URL
       #   fromDatabase:
       #     name: elephant
