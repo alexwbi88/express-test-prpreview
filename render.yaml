@@ -1,4 +1,4 @@
-previewsEnabled: true
+# previewsEnabled: true
 services:
 -   type: web
     name: bp_test
@@ -12,7 +12,12 @@ services:
     buildCommand: yarn
     startCommand: node app.js
     plan: free
-    autoDeploy: false # optional
+    autoDeploy: true # optional
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 60 # optional if targetCPUPercent is set
+      targetCPUPercent: 60 # optional if targetMemory is set
     # pullRequestPreviewsEnabled: true # optional
 # -   type: redis
 #     name: lightning
