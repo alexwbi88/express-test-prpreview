@@ -1,20 +1,20 @@
 services:
 -   type: web
-    name: bp_test_22
+    name: bp_test
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn
     startCommand: node app.js
-    # numInstances: 3
+    numInstances: 3
     plan: starter
     autoDeploy: false # optional
-    envVars:
-      # - key: STRIPE_API_KEY
-      #   value: Z2V0IG91dHRhIGhlcmUhCg
-      - key: ENV
-        value: foo
-      - key: FILL_THIS_IN
-        sync: false
+    # envVars:
+    #   # - key: STRIPE_API_KEY
+    #   #   value: Z2V0IG91dHRhIGhlcmUhCg
+    #   - key: ENV
+    #     value: foo
+    #   - key: FILL_THIS_IN
+    #     sync: false
       # - fromGroup: conc-settings
       # - key: DB_URL
       #   fromDatabase:
@@ -78,15 +78,15 @@ services:
 #     buildCommand: yarn
 #     startCommand: node app.js
 #     autoDeploy: false # optional
-envVarGroups:
-  - name: conc-settings
-    envVars:
-      - key: CONCURRENCY
-        value: 2
-      - key: SECRET
-        generateValue: true
-      - key: USER_PROVIDED_SECRET
-        sync: false
+# envVarGroups:
+#   - name: conc-settings
+#     envVars:
+#       - key: CONCURRENCY
+#         value: 2
+#       - key: SECRET
+#         generateValue: true
+#       - key: USER_PROVIDED_SECRET
+#         sync: false
   # - name: stripe
   #   envVars:
   #     - key: STRIPE_API_URL
