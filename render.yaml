@@ -18,7 +18,7 @@ services:
       maxInstances: 3
       targetMemoryPercent: 60 # optional if targetCPUPercent is set
       targetCPUPercent: 60 # optional if targetMemory is set
-    # pullRequestPreviewsEnabled: true # optional
+    pullRequestPreviewsEnabled: true # optional
 # -   type: redis
 #     name: lightning
 #     ipAllowList: # required
