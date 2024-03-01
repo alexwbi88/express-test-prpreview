@@ -1,13 +1,4 @@
 services:
-# -   type: web
-#     name: bp_test_new!
-#     runtime: node
-#     repo: https://github.com/alexwbi88/express-test-prpreview
-#     buildCommand: yarn
-#     startCommand: node app.js
-#     # numInstances: 3
-#     plan: starter
-#     autoDeploy: false # optional
 -   type: web
     name: bp_test
     runtime: node
@@ -21,13 +12,13 @@ services:
     #   name: data
     #   mountPath: /data
     #   sizeGB: 10 # optional
-    # envVars:
-    #   # - key: STRIPE_API_KEY
-    #   #   value: Z2V0IG91dHRhIGhlcmUhCg
-    #   - key: ENV
-    #     value: foo
-    #   - key: FILL_THIS_IN
-    #     sync: false
+    envVars:
+      # - key: STRIPE_API_KEY
+      #   value: Z2V0IG91dHRhIGhlcmUhCg
+      - key: ENV
+        value: foo
+      - key: FILL_THIS_IN
+        sync: false
       # - fromGroup: conc-settings
       # - key: DB_URL
       #   fromDatabase:
@@ -37,12 +28,21 @@ services:
       #   fromDatabase:
       #     name: elephant-replica
       #     property: connectionString
-    scaling:
-      minInstances: 1
-      maxInstances: 3
-      targetMemoryPercent: 60 # optional if targetCPUPercent is set
-      targetCPUPercent: 60 # optional if targetMemory is set
+    # scaling:
+    #   minInstances: 1
+    #   maxInstances: 3
+    #   targetMemoryPercent: 60 # optional if targetCPUPercent is set
+    #   targetCPUPercent: 60 # optional if targetMemory is set
     # pullRequestPreviewsEnabled: true # optional
+# -   type: web
+#     name: bp_test_new!
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-test-prpreview
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     # numInstances: 3
+#     plan: starter
+#     autoDeploy: false # optional
 # -   type: redis
 #     name: lightning
 #     ipAllowList: # required
