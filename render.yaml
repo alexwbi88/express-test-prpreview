@@ -1,6 +1,6 @@
 services:
 -   type: web
-    name: bp_test_22
+    name: bp_test
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn
