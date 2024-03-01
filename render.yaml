@@ -9,8 +9,8 @@ services:
     plan: starter
     autoDeploy: false # optional
     envVars:
-      - key: STRIPE_API_KEY
-        value: Z2V0IG91dHRhIGhlcmUhCg
+      # - key: STRIPE_API_KEY
+      #   value: Z2V0IG91dHRhIGhlcmUhCg
       - key: ENV
         value: foo
       - fromGroup: conc-settings
@@ -85,7 +85,7 @@ envVarGroups:
         generateValue: true
       - key: USER_PROVIDED_SECRET
         sync: false
-  - name: stripe
-    envVars:
-      - key: STRIPE_API_URL
-        value: https://api.stripe.com/v2
+  # - name: stripe
+  #   envVars:
+  #     - key: STRIPE_API_URL
+  #       value: https://api.stripe.com/v2
