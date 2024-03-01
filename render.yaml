@@ -13,8 +13,8 @@ services:
     #   mountPath: /data
     #   sizeGB: 10 # optional
     envVars:
-      # - key: STRIPE_API_KEY
-      #   value: Z2V0IG91dHRhIGhlcmUhCg
+      - key: STRIPE_API_KEY
+        value: Z2V0IG91dHRhIGhlcmUhCg
       - key: ENV
         value: foo
       - key: FILL_THIS_IN
