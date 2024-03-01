@@ -4,22 +4,17 @@ services:
     name: bp_test
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
-    # scaling:
-      # minInstances: 1
-      # maxInstances: 3
-      # targetMemoryPercent: 60 # optional if targetCPUPercent is set
-      # targetCPUPercent: 60 # optional if targetMemory is set
     buildCommand: yarn
     startCommand: node app.js
     numInstances: 3
     plan: starter
     autoDeploy: true # optional
-    scaling:
-      minInstances: 1
-      maxInstances: 3
-      targetMemoryPercent: 60 # optional if targetCPUPercent is set
-      targetCPUPercent: 60 # optional if targetMemory is set
-    pullRequestPreviewsEnabled: true # optional
+    # scaling:
+    #   minInstances: 1
+    #   maxInstances: 3
+    #   targetMemoryPercent: 60 # optional if targetCPUPercent is set
+    #   targetCPUPercent: 60 # optional if targetMemory is set
+    # pullRequestPreviewsEnabled: true # optional
 # -   type: redis
 #     name: lightning
 #     ipAllowList: # required
