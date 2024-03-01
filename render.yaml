@@ -13,6 +13,8 @@ services:
       #   value: Z2V0IG91dHRhIGhlcmUhCg
       - key: ENV
         value: foo
+      - key: FILL_THIS_IN
+        sync: false
       - fromGroup: conc-settings
       # - key: DB_URL
       #   fromDatabase:
