@@ -1,6 +1,6 @@
 services:
 -   type: web
-    name: bp_test
+    name: bp_test_laskdjfsadl
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn
