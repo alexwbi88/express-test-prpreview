@@ -8,10 +8,10 @@ services:
     # numInstances: 3
     plan: starter
     autoDeploy: false # optional
-    disk:
-      name: data
-      mountPath: /data
-      sizeGB: 10 # optional
+    # disk:
+    #   name: data
+    #   mountPath: /data
+    #   sizeGB: 10 # optional
     # envVars:
     #   # - key: STRIPE_API_KEY
     #   #   value: Z2V0IG91dHRhIGhlcmUhCg
@@ -28,11 +28,11 @@ services:
       #   fromDatabase:
       #     name: elephant-replica
       #     property: connectionString
-    # scaling:
-    #   minInstances: 1
-    #   maxInstances: 3
-    #   targetMemoryPercent: 60 # optional if targetCPUPercent is set
-    #   targetCPUPercent: 60 # optional if targetMemory is set
+    scaling:
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 60 # optional if targetCPUPercent is set
+      targetCPUPercent: 60 # optional if targetMemory is set
     # pullRequestPreviewsEnabled: true # optional
 # -   type: redis
 #     name: lightning
