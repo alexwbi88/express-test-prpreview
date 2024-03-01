@@ -15,7 +15,7 @@ services:
         value: foo
       - key: FILL_THIS_IN
         sync: false
-      # - fromGroup: conc-settings
+      - fromGroup: conc-settings
       # - key: DB_URL
       #   fromDatabase:
       #     name: elephant
