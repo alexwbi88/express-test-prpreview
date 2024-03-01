@@ -1,14 +1,14 @@
-# previewsEnabled: true
-services:
--   type: web
-    name: bp_test_new
-    runtime: node
-    repo: https://github.com/alexwbi88/express-test-prpreview
-    buildCommand: yarn
-    startCommand: node app.js
-    numInstances: 3
-    plan: starter
-    autoDeploy: true # optional
+previewsEnabled: true
+# services:
+# -   type: web
+#     name: bp_test_new
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-test-prpreview
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     numInstances: 3
+#     plan: starter
+#     autoDeploy: true # optional
     # scaling:
     #   minInstances: 1
     #   maxInstances: 3
