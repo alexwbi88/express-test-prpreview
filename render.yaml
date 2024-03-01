@@ -5,9 +5,9 @@ services:
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn
     startCommand: node app.js
-    numInstances: 3
+    # numInstances: 3
     plan: starter
-    autoDeploy: true # optional
+    autoDeploy: false # optional
     envVars:
       - key: STRIPE_API_KEY
         value: Z2V0IG91dHRhIGhlcmUhCg
