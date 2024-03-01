@@ -13,6 +13,7 @@ services:
         value: Z2V0IG91dHRhIGhlcmUhCg
       - key: ENV
         value: foo
+      - fromGroup: conc-settings
       # - key: DB_URL
       #   fromDatabase:
       #     name: elephant
@@ -75,3 +76,16 @@ services:
 #     buildCommand: yarn
 #     startCommand: node app.js
 #     autoDeploy: false # optional
+envVarGroups:
+  - name: conc-settings
+    envVars:
+      - key: CONCURRENCY
+        value: 2
+      - key: SECRET
+        generateValue: true
+      - key: USER_PROVIDED_SECRET
+        sync: false
+  - name: stripe
+    envVars:
+      - key: STRIPE_API_URL
+        value: https://api.stripe.com/v2
