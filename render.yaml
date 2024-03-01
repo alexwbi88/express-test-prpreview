@@ -11,7 +11,7 @@ services:
       # targetCPUPercent: 60 # optional if targetMemory is set
     buildCommand: yarn
     startCommand: node app.js
-    plan: free
+    plan: starter
     autoDeploy: true # optional
     scaling:
       minInstances: 1
