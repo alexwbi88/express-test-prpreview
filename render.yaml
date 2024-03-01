@@ -8,15 +8,15 @@ services:
     # numInstances: 3
     plan: starter
     autoDeploy: false # optional
--   type: web
-    name: bp_test
-    runtime: node
-    repo: https://github.com/alexwbi88/express-test-prpreview
-    buildCommand: yarn
-    startCommand: node app.js
-    # numInstances: 3
-    plan: starter
-    autoDeploy: false # optional
+# -   type: web
+#     name: bp_test
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-test-prpreview
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     # numInstances: 3
+#     plan: starter
+#     autoDeploy: false # optional
     # disk:
     #   name: data
     #   mountPath: /data
