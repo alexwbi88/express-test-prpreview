@@ -8,6 +8,7 @@ services:
     # numInstances: 3
     plan: standard
     autoDeploy: false # optional
+    maxShutdownDelaySeconds: 500 # seconds
     # disk:
     #   name: data
     #   mountPath: /data
