@@ -3,7 +3,7 @@ services:
     name: bp_test
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
-    buildCommand: yarn
+    buildCommand: yarn && echo foo
     startCommand: node app.js
     # numInstances: 3
     plan: standard
