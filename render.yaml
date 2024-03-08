@@ -8,19 +8,19 @@ services:
     # numInstances: 3
     plan: standard
     autoDeploy: false # optional
-    maxShutdownDelaySeconds: 60 # seconds
+    # maxShutdownDelaySeconds: 60 # seconds
     # disk:
     #   name: data
     #   mountPath: /data
     #   sizeGB: 10 # optional
-    envVars:
-      - key: STRIPE_API_KEY
-        value: Z2V0IG91dHRhIGhlcmUhCg
-      - key: ENV
-        value: foo
-      - key: FILL_THIS_IN
-        sync: false
-      - fromGroup: conc-settings
+    # envVars:
+    #   - key: STRIPE_API_KEY
+    #     value: Z2V0IG91dHRhIGhlcmUhCg
+    #   - key: ENV
+    #     value: foo
+    #   - key: FILL_THIS_IN
+    #     sync: false
+    #   - fromGroup: conc-settings
       # - key: DB_URL
       #   fromDatabase:
       #     name: elephant
@@ -29,78 +29,78 @@ services:
       #   fromDatabase:
       #     name: elephant-replica
       #     property: connectionString
-    scaling:
-      minInstances: 1
-      maxInstances: 3
-      targetMemoryPercent: 60 # optional if targetCPUPercent is set
-      targetCPUPercent: 60 # optional if targetMemory is set
-    pullRequestPreviewsEnabled: true # optional
--   type: web
-    name: bp_test_new!
-    runtime: node
-    repo: https://github.com/alexwbi88/express-test-prpreview
-    buildCommand: yarn
-    startCommand: node app.js
-    # numInstances: 3
-    plan: starter
-    autoDeploy: false # optional
--   type: redis
-    name: lightning
-    ipAllowList: # required
-      - source: 0.0.0.0/0
-        description: everywhere
-    plan: free # optional (defaults to starter instance type)
-    maxmemoryPolicy: noeviction # optional (defaults to allkeys-lru)
--   type: pserv
-    name: bp_test_private
-    runtime: node
+#     scaling:
+#       minInstances: 1
+#       maxInstances: 3
+#       targetMemoryPercent: 60 # optional if targetCPUPercent is set
+#       targetCPUPercent: 60 # optional if targetMemory is set
+#     pullRequestPreviewsEnabled: true # optional
+# -   type: web
+#     name: bp_test_new!
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-test-prpreview
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     # numInstances: 3
+#     plan: starter
+#     autoDeploy: false # optional
+# -   type: redis
+#     name: lightning
+#     ipAllowList: # required
+#       - source: 0.0.0.0/0
+#         description: everywhere
+#     plan: free # optional (defaults to starter instance type)
+#     maxmemoryPolicy: noeviction # optional (defaults to allkeys-lru)
+# -   type: pserv
+#     name: bp_test_private
+#     runtime: node
+#     # repo: https://github.com/alexwbi88/express-hello-world.git
+#     # scaling:
+#       # minInstances: 1
+#       # maxInstances: 3
+#       # targetMemoryPercent: 60 # optional if targetCPUPercent is set
+#       # targetCPUPercent: 60 # optional if targetMemory is set
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     plan: free
+#     autoDeploy: true # optional
+# -   type: web
+#     name: bp_test2
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-test-prpreview
     # repo: https://github.com/alexwbi88/express-hello-world.git
     # scaling:
       # minInstances: 1
       # maxInstances: 3
       # targetMemoryPercent: 60 # optional if targetCPUPercent is set
       # targetCPUPercent: 60 # optional if targetMemory is set
-    buildCommand: yarn
-    startCommand: node app.js
-    plan: free
-    autoDeploy: true # optional
--   type: web
-    name: bp_test2
-    runtime: node
-    repo: https://github.com/alexwbi88/express-test-prpreview
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     plan: free
+#     autoDeploy: true # optional
+#     pullRequestPreviewsEnabled: true # optional
+# -   type: web
+#     name: new_web_service_test
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-hello-world
     # repo: https://github.com/alexwbi88/express-hello-world.git
     # scaling:
       # minInstances: 1
       # maxInstances: 3
       # targetMemoryPercent: 60 # optional if targetCPUPercent is set
       # targetCPUPercent: 60 # optional if targetMemory is set
-    buildCommand: yarn
-    startCommand: node app.js
-    plan: free
-    autoDeploy: true # optional
-    pullRequestPreviewsEnabled: true # optional
--   type: web
-    name: new_web_service_test
-    runtime: node
-    repo: https://github.com/alexwbi88/express-hello-world
-    # repo: https://github.com/alexwbi88/express-hello-world.git
-    # scaling:
-      # minInstances: 1
-      # maxInstances: 3
-      # targetMemoryPercent: 60 # optional if targetCPUPercent is set
-      # targetCPUPercent: 60 # optional if targetMemory is set
-    buildCommand: yarn
-    startCommand: node app.js
-    autoDeploy: false # optional
-envVarGroups:
-  - name: conc-settings
-    envVars:
-      - key: CONCURRENCY
-        value: 2
-      - key: SECRET
-        generateValue: true
-      - key: USER_PROVIDED_SECRET
-        sync: false
+#     buildCommand: yarn
+#     startCommand: node app.js
+#     autoDeploy: false # optional
+# envVarGroups:
+#   - name: conc-settings
+#     envVars:
+#       - key: CONCURRENCY
+#         value: 2
+#       - key: SECRET
+#         generateValue: true
+#       - key: USER_PROVIDED_SECRET
+#         sync: false
   # - name: stripe
   #   envVars:
   #     - key: STRIPE_API_URL
