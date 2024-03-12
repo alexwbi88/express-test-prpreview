@@ -1,7 +1,7 @@
 services:
 -   type: web
-    # name: bp_test
-    # runtime: node 
+    name: bp_test
+    runtime: node 
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn && echo foo
     startCommand: node app.js
