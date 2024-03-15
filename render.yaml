@@ -107,12 +107,12 @@ services:
   #     - key: STRIPE_API_URL
   #       value: https://api.stripe.com/v2
 
-# envVarGroups:
-#   - name: mygroup
-#     envVars:
-#       - key: REALLY_SECRET_KEY
-#         # value: abc123
-#         sync: false
-#       - key: THISONEISFINE
-#         # value: def456
-#         sync: false
+envVarGroups:
+  - name: mygroup
+    envVars:
+      - key: REALLY_SECRET_KEY
+        # value: abc123
+        sync: false
+      - key: THISONEISFINE
+        # value: def456
+        sync: false
