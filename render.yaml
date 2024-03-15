@@ -1,6 +1,6 @@
 services:
 -   type: web
-    name: bp_test
+    name: t55
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn && echo foo
