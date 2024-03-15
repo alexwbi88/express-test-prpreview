@@ -111,6 +111,6 @@ envVarGroups:
   - name: mygroup
     envVars:
       - key: REALLY_SECRET_KEY
-        value: abc123
+        sync: false
       - key: THISONEISFINE
-        value: def456
+        sync: false
