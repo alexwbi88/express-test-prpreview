@@ -1,4 +1,12 @@
 services:
+-   type: pserv
+    name: t55
+    runtime: python
+    repo: https://github.com/alexwbi88/express-test-prpreview
+    buildCommand: yarn && echo foo
+    startCommand: node app.js
+    # numInstances: 3
+    plan: standard
 -   type: web
     name: t55
     runtime: node
