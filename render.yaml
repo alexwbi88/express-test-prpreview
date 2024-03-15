@@ -6,7 +6,7 @@ services:
     buildCommand: yarn && echo foo
     startCommand: node app.js
     # numInstances: 3
-    plan: standard
+    plan: starter
     # autoDeploy: false # optional
     # maxShutdownDelaySeconds: 60 # seconds
     # disk:
