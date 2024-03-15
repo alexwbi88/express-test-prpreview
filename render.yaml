@@ -1,5 +1,5 @@
 services:
--   type: t55
+-   type: web
     name: t55
     runtime: python
     repo: https://github.com/alexwbi88/express-test-prpreview
