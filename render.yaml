@@ -1,6 +1,6 @@
 services:
 -   type: web
-    name: t55
+    name: t56
     runtime: python
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn && echo foo
@@ -8,7 +8,7 @@ services:
     # numInstances: 3
     plan: standard
 -   type: web
-    name: t55
+    name: t56
     runtime: node
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn && echo foo
