@@ -1,5 +1,5 @@
 services:
--   type: pserv
+-   type: t55
     name: t55
     runtime: python
     repo: https://github.com/alexwbi88/express-test-prpreview
