@@ -49,32 +49,32 @@
 
 services:
 -   type: web
-    name: t56
+    name: t55
     runtime: python
     repo: https://github.com/alexwbi88/express-test-prpreview
     buildCommand: yarn && echo foo
     startCommand: node app.js
     # numInstances: 3
     plan: standard
--   type: web
-    name: t56
-    runtime: node
-    repo: https://github.com/alexwbi88/express-test-prpreview
-    buildCommand: yarn && echo foo
-    startCommand: node app.js
-    # numInstances: 3
-    plan: starter
-    # autoDeploy: false # optional
-    # maxShutdownDelaySeconds: 60 # seconds
-    # disk:
-    #   name: data
-    #   mountPath: /data
-    #   sizeGB: 10 # optional
-    envVars:
-      - key: STRIPE_API_KEY
-        value: Z2V0IG91dHRhIGhlcmUhCg
-      - key: ENV
-        value: foo
+# -   type: web
+#     name: t55
+#     runtime: node
+#     repo: https://github.com/alexwbi88/express-test-prpreview
+#     buildCommand: yarn && echo foo
+#     startCommand: node app.js
+#     # numInstances: 3
+#     plan: starter
+#     # autoDeploy: false # optional
+#     # maxShutdownDelaySeconds: 60 # seconds
+#     # disk:
+#     #   name: data
+#     #   mountPath: /data
+#     #   sizeGB: 10 # optional
+#     envVars:
+#       - key: STRIPE_API_KEY
+#         value: Z2V0IG91dHRhIGhlcmUhCg
+#       - key: ENV
+#         value: foo
       # - fromGroup: mygroup
     #   - key: FILL_THIS_IN
     #     sync: false
