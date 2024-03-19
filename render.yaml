@@ -6,11 +6,11 @@ services:
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
   plan: starter
-  envVars:
-  - key: ENV
-    sync: false
-  - key: STRIPE_API_KEY
-    sync: false
+  # envVars:
+  # - key: ENV
+  #   sync: false
+  # - key: STRIPE_API_KEY
+  #   sync: false
   # - fromGroup: mygroup
   region: oregon
   buildCommand: yarn && echo foo
@@ -21,11 +21,11 @@ services:
   repo: https://github.com/render-examples/flask-hello-world
   branch: hello-spring
   plan: starter
-  envVars:
-  - key: STRIPE_API_KEY
-    sync: false
-  - key: ENV
-    sync: false
+  # envVars:
+  # - key: STRIPE_API_KEY
+  #   sync: false
+  # - key: ENV
+  #   sync: false
   # - fromGroup: mygroup
   region: oregon
   buildCommand: yarn && echo foo
