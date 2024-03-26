@@ -1,7 +1,7 @@
 # Exported from Render on 2024-03-26T14:21:51Z
 services:
 - type: web
-  name: express-test-prpreview-new!!
+  name: express-test-prpreview
   runtime: node
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
