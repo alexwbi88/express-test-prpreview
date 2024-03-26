@@ -1,4 +1,4 @@
-# Exported from Render on 2024-03-26T14:18:18Z
+# Exported from Render on 2024-03-26T14:21:51Z
 services:
 - type: web
   name: express-test-prpreview
@@ -6,6 +6,14 @@ services:
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
   plan: starter
+  envVars:
+  - key: .SECRETS
+    sync: false
+  - key: ENV
+    sync: false
+  - key: STRIPE_KEY
+    sync: false
+  - fromGroup: mygroup
   region: oregon
   buildCommand: yarn --frozen-lockfile install
   startCommand: node app.js
