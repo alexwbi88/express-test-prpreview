@@ -19,7 +19,7 @@
 #   startCommand: node app.js
 
 databases:
-- name: t_db_number_2
+- name: t_db_number_3
   databaseName: t4
   user: t4_user
   plan: starter
@@ -27,6 +27,6 @@ databases:
   ipAllowList:
   - source: 0.0.0.0/0
     description: everywhere
-  postgresMajorVersion: "13"
+  postgresMajorVersion: "10"
 
 version: "1"
