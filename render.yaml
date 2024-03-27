@@ -27,6 +27,6 @@ databases:
   ipAllowList:
   - source: 0.0.0.0/0
     description: everywhere
-  postgresMajorVersion: "10"
+  postgresMajorVersion: "11"
 
 version: "1"
