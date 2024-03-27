@@ -17,4 +17,16 @@ services:
   region: oregon
   buildCommand: yarn --frozen-lockfile install
   startCommand: node app.js
+
+databases:
+- name: t4
+  databaseName: t4
+  user: t4_user
+  plan: free
+  region: oregon
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "15"
+
 version: "1"
