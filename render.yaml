@@ -19,7 +19,7 @@
 #   startCommand: node app.js
 
 databases:
-- name: t_db
+- name: t_db_number_2
   databaseName: t4
   user: t4_user
   plan: free
