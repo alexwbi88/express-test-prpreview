@@ -1,7 +1,7 @@
 # Exported from Render on 2024-03-18T16:04:03Z
 services:
 - type: web
-  name: bp_test
+  # name: bp_test
   runtime: node
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
@@ -23,7 +23,7 @@ services:
   plan: starter
   envVars:
   - key: STRIPE_API_KEY
-    sync: false
+    # sync: false
   - key: ENV
     sync: false
   - fromGroup: mygroup
@@ -39,7 +39,7 @@ services:
   region: frankfurt
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
-- type: redis
+# - type: redis
   name: t3
   plan: free
   region: oregon
