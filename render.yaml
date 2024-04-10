@@ -1,4 +1,5 @@
 # Exported from Render on 2024-03-18T16:04:03Z
+previewsEnabled: true
 services:
 - type: web
   # name: bp_test
