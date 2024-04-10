@@ -2,7 +2,7 @@
 previewsEnabled: true
 services:
 - type: web
-  # name: bp_test
+  name: bp_test
   runtime: node
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
@@ -24,7 +24,7 @@ services:
   plan: starter
   envVars:
   - key: STRIPE_API_KEY
-    # sync: false
+    sync: false
   - key: ENV
     sync: false
   - fromGroup: mygroup
@@ -33,14 +33,14 @@ services:
   startCommand: node app.js
 - type: web
   name: flask-hello-world
-  # runtime: python
+  runtime: python
   repo: https://github.com/render-examples/flask-hello-world
   branch: master
   plan: free
   region: frankfurt
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
-# - type: redis
+- type: redis
   name: t3
   plan: free
   region: oregon
