@@ -1,5 +1,5 @@
 # Exported from Render on 2024-03-18T16:04:03Z
-previewsEnabled: true
+# previewsEnabled: true
 services:
 - type: web
   name: bp_test
@@ -37,7 +37,7 @@ services:
   repo: https://github.com/render-examples/flask-hello-world
   branch: master
   plan: free
-  region: frankfurt
+  region: bogus
   buildCommand: pip install -r requirements.txt
   startCommand: gunicorn app:app
 - type: redis
