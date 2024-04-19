@@ -1,20 +1,20 @@
-# problem with env vars, name, and build command for 1st service
+# bad runtime and env var for 1st service, bad region and build command for 2nd service
 services:
 - type: web
-  # name: bp_test
+  name: bp_test
   runtime: modem
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
-  plan: starter
+  # plan: starter
   envVars:
   - key: ENV
     # sync: false
   - key: STRIPE_API_KEY
-    # sync: false
+    sync: false
   - fromGroup: mygroup
   region: oregon
   buildCommand: yarn && echo foo
-  # startCommand: node app.js
+  startCommand: node app.js
 - type: web
   name: t55
   runtime: node
@@ -27,6 +27,6 @@ services:
   - key: ENV
     sync: false
   - fromGroup: mygroup
-  region: oregon
-  buildCommand: yarn && echo foo
+  region: oregano
+  # buildCommand: yarn && echo foo
   startCommand: node app.js

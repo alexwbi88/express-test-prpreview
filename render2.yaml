@@ -1,20 +1,20 @@
-# problem with env vars, name, and build command for 1st service
+# missing name and runtime for 1st service
 services:
 - type: web
   # name: bp_test
-  runtime: modem
+  # runtime: modem
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
-  plan: starter
+  # plan: starter
   envVars:
   - key: ENV
-    # sync: false
+    sync: false
   - key: STRIPE_API_KEY
-    # sync: false
+    sync: false
   - fromGroup: mygroup
   region: oregon
   buildCommand: yarn && echo foo
-  # startCommand: node app.js
+  startCommand: node app.js
 - type: web
   name: t55
   runtime: node
