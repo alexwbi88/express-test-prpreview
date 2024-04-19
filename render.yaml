@@ -1,15 +1,14 @@
-# Exported from Render on 2024-03-18T16:04:03Z
-# previewsEnabled: true
+# missing name and runtime for 1st service
 services:
 - type: web
-  name: bp_test
-  runtime: modem
+  # name: bp_test
+  # runtime: modem
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
   # plan: starter
   envVars:
   - key: ENV
-    # sync: false
+    sync: false
   - key: STRIPE_API_KEY
     sync: false
   - fromGroup: mygroup
@@ -28,6 +27,6 @@ services:
   - key: ENV
     sync: false
   - fromGroup: mygroup
-  region: oregano
-  # buildCommand: yarn && echo foo
+  region: oregon
+  buildCommand: yarn && echo foo
   startCommand: node app.js
