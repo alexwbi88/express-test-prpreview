@@ -1,8 +1,8 @@
-# 1st service is ok, 2nd service shows problems
+# 1st service is ok, 2nd service has problems with scaling
 services:
 - type: web
   name: bp_test
-  runtime: docker
+  runtime: node
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
   plan: starter
