@@ -1,4 +1,4 @@
-# 1st service is ok, 2nd service shows problems
+# problem with docker service and incompatible args
 services:
 - type: web
   name: bp_test
@@ -17,7 +17,7 @@ services:
   startCommand: node app.js
 - type: web
   name: t55
-  # runtime: node
+  runtime: node
   repo: https://github.com/render-examples/flask-hello-world
   branch: hello-spring
   plan: starter
@@ -27,12 +27,6 @@ services:
   - key: ENV
     sync: false
   - fromGroup: mygroup
-  region: oregano
+  region: oregon
   buildCommand: yarn && echo foo
   startCommand: node app.js
-  numInstances: 3
-  scaling:
-    minInstances: 0
-    maxInstances: 3
-    targetMemoryPercent: 60 # Optional if targetCPUPercent is set
-    targetCPUPercent: 60    # Optional if targetMemory is set
