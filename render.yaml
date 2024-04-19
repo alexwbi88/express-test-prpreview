@@ -1,0 +1,32 @@
+# service has a problem and db has a duplicate name as existing db
+services:
+- type: web
+  name: express-test-prpreview
+  runtime: node
+  repo: https://github.com/alexwbi88/express-test-prpreview
+  branch: main
+  plan: starter
+  envVars:
+  - key: .SECRETS
+    sync: false
+  - key: ENV
+    sync: false
+  - key: STRIPE_KEY
+    sync: false
+  - fromGroup: mygroup
+  region: oregon
+  # buildCommand: yarn --frozen-lockfile install
+  startCommand: node app.js
+
+databases:
+- name: t_db
+  databaseName: t4
+  user: t4_user
+  # plan: starter
+  # region: oregon
+  ipAllowList:
+  - source: 0.0.0.0/0
+    description: everywhere
+  postgresMajorVersion: "11"
+
+version: "1"
