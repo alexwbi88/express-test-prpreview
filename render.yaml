@@ -22,7 +22,7 @@ databases:
 - name: t_db
   databaseName: t4
   user: t4_user
-  # plan: starter
+  plan: free
   # region: oregon
   ipAllowList:
   - source: 0.0.0.0/0
