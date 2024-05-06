@@ -6,6 +6,11 @@ services:
   repo: https://github.com/alexwbi88/express-test-prpreview
   branch: main
   plan: starter
+  scaling: # Autoscaling configuration
+      minInstances: 1
+      maxInstances: 3
+      targetMemoryPercent: 60 # Optional if targetCPUPercent is set
+      targetCPUPercent: 60    # Optional if targetMemory is set
   envVars:
   - key: .SECRETS
     sync: false
