@@ -1,3 +1,4 @@
+previewsEnabled: true
 # service has a problem and db has a duplicate name as existing db
 services:
 - type: web
