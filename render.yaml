@@ -80,32 +80,32 @@ services:
         envVarKey: MINIO_ROOT_PASSWORD
     - fromGroup: my-env-group # Add all variables from an environment group
 - type: web
-    runtime: docker
-    name: webdis
-    repo: https://github.com/render-examples/webdis.git # Default: Repo containing render.yaml
-    rootDir: webdis # Default: Repo root
-    dockerCommand: ./webdis.sh # Default: Dockerfile CMD
-    scaling: # Autoscaling configuration
-      minInstances: 1
-      maxInstances: 3
-      targetMemoryPercent: 60 # Optional if targetCPUPercent is set
-      targetCPUPercent: 60    # Optional if targetMemory is set
-    healthCheckPath: /
-    registryCredential: # Default: No credential
-      fromRegistryCreds:
-        name: my-credentials
-    envVars:
-      - key: REDIS_HOST
-        fromService: # Reference a property from another service (see available properties below)
-          type: redis
-          name: lightning
-          property: host
-      - key: REDIS_PORT
-        fromService:
-          type: redis
-          name: lightning
-          property: port
-      - fromGroup: conc-settings
+  runtime: docker
+  name: webdis
+  repo: https://github.com/render-examples/webdis.git # Default: Repo containing render.yaml
+  rootDir: webdis # Default: Repo root
+  dockerCommand: ./webdis.sh # Default: Dockerfile CMD
+  scaling: # Autoscaling configuration
+    minInstances: 1
+    maxInstances: 3
+    targetMemoryPercent: 60 # Optional if targetCPUPercent is set
+    targetCPUPercent: 60    # Optional if targetMemory is set
+  healthCheckPath: /
+  registryCredential: # Default: No credential
+    fromRegistryCreds:
+      name: my-credentials
+  envVars:
+    - key: REDIS_HOST
+      fromService: # Reference a property from another service (see available properties below)
+        type: redis
+        name: lightning
+        property: host
+    - key: REDIS_PORT
+      fromService:
+        type: redis
+        name: lightning
+        property: port
+    - fromGroup: conc-settings
 - type: web
   name: t55
   runtime: python
