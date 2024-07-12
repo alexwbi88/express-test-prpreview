@@ -17,7 +17,7 @@ services:
   buildCommand: yarn && echo foo
   startCommand: node app.js
 - type: web
-  name: t55
+  name: t5555
   runtime: node
   repo: https://github.com/render-examples/flask-hello-world
   branch: hello-spring
@@ -60,10 +60,10 @@ services:
   repo: https://github.com/alexwbi88/express-test-prpreview
   buildCommand: yarn && echo foo
   startCommand: node app.js
-  numInstances: 3
+  # numInstances: 3
   plan: starter
   autoDeploy: false # optional
-  maxShutdownDelaySeconds: 60 # seconds
+  # maxShutdownDelaySeconds: 60 # seconds
   disk:
     name: data
     mountPath: /data
