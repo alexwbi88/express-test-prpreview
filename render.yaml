@@ -192,7 +192,8 @@ services:
     targetCPUPercent: 60 # optional if targetMemory is set
   buildCommand: yarn
   startCommand: node app.js
-  plan: free
+  # plan: free
+  pullRequestPreviewsEnabled: true
 - type: web
   name: new_web_service_test
   runtime: node
