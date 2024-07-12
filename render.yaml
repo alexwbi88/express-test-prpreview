@@ -194,7 +194,6 @@ services:
   startCommand: node app.js
   plan: free
   autoDeploy: true # optional
-  # pullRequestPreviewsEnabled: true # optional
 - type: web
   name: new_web_service_test
   runtime: node
