@@ -107,7 +107,7 @@ services:
       description: everywhere
   plan: free # optional (defaults to starter instance type)
   maxmemoryPolicy: noeviction # optional (defaults to allkeys-lru)
--  type: pserv
+- type: pserv
   name: bp_test_private
   runtime: node
   repo: https://github.com/alexwbi88/express-hello-world.git
@@ -171,4 +171,4 @@ envVarGroups:
         # value: def456
         sync: false
 
-version: "1"
+# version: "1"
