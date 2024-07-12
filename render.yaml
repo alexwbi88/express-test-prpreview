@@ -149,26 +149,26 @@ services:
 #   startCommand: node app.js
 #   autoDeploy: false # optional
 
-# envVarGroups:
-#   - name: conc-settings
-#     envVars:
-#       - key: CONCURRENCY
-#         value: 2
-#       - key: SECRET
-#         generateValue: true
-#       - key: USER_PROVIDED_SECRET
-#         sync: false
-#   - name: stripe
-#     envVars:
-#       - key: STRIPE_API_URL
-#         value: https://api.stripe.com/v2
-#   - name: mygroup
-#     envVars:
-#       - key: REALLY_SECRET_KEY
-#         # value: abc123
-#         sync: false
-#       - key: THISONEISFINE
-#         # value: def456
-#         sync: false
+envVarGroups:
+  - name: conc-settings
+    envVars:
+      - key: CONCURRENCY
+        value: 2
+      - key: SECRET
+        generateValue: true
+      - key: USER_PROVIDED_SECRET
+        sync: false
+  - name: stripe
+    envVars:
+      - key: STRIPE_API_URL
+        value: https://api.stripe.com/v2
+  - name: mygroup
+    envVars:
+      - key: REALLY_SECRET_KEY
+        # value: abc123
+        sync: false
+      - key: THISONEISFINE
+        # value: def456
+        sync: false
 
-# # version: "1"
+version: "1"
