@@ -123,11 +123,11 @@ services:
   # numInstances: 3
   plan: starter
   autoDeploy: false # optional
-  # maxShutdownDelaySeconds: 60 # seconds
-  # disk:
-  #   name: data
-  #   mountPath: /data
-  #   sizeGB: 10 # optional
+  maxShutdownDelaySeconds: 60 # seconds
+  disk:
+    name: data
+    mountPath: /data
+    sizeGB: 10 # optional
   envVars:
     - key: STRIPE_API_KEY
       value: Z2V0IG91dHRhIGhlcmUhCg
@@ -137,14 +137,14 @@ services:
     - key: FILL_THIS_IN
       sync: false
     - fromGroup: conc-settings
-    # - key: DB_URL
-    #   fromDatabase:
-    #     name: elephant
-    #     property: connectionString
-    # - key: DB_REPLICA_URL
-    #   fromDatabase:
-    #     name: elephant-replica
-    #     property: connectionString
+    - key: DB_URL
+      fromDatabase:
+        name: elephant
+        property: connectionString
+    - key: DB_REPLICA_URL
+      fromDatabase:
+        name: elephant-replica
+        property: connectionString
   scaling:
     minInstances: 1
     maxInstances: 3
