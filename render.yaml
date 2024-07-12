@@ -124,7 +124,7 @@ services:
   name: bp_test2
   runtime: node
   repo: https://github.com/alexwbi88/express-test-prpreview
-  repo: https://github.com/alexwbi88/express-hello-world.git
+  # repo: https://github.com/alexwbi88/express-hello-world.git
   scaling:
     minInstances: 1
     maxInstances: 3
@@ -139,7 +139,7 @@ services:
   name: new_web_service_test
   runtime: node
   repo: https://github.com/alexwbi88/express-hello-world
-  repo: https://github.com/alexwbi88/express-hello-world.git
+  # repo: https://github.com/alexwbi88/express-hello-world.git
   scaling:
     minInstances: 1
     maxInstances: 3
