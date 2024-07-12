@@ -77,14 +77,14 @@ services:
     - key: FILL_THIS_IN
       sync: false
     - fromGroup: conc-settings
-    - key: DB_URL
-      fromDatabase:
-        name: elephant
-        property: connectionString
-    - key: DB_REPLICA_URL
-      fromDatabase:
-        name: elephant-replica
-        property: connectionString
+    # - key: DB_URL
+    #   fromDatabase:
+    #     name: elephant
+    #     property: connectionString
+    # - key: DB_REPLICA_URL
+    #   fromDatabase:
+    #     name: elephant-replica
+    #     property: connectionString
   scaling:
     minInstances: 1
     maxInstances: 3
