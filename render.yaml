@@ -31,21 +31,21 @@ services:
   region: oregon
   buildCommand: yarn && echo foo
   startCommand: node app.js
-# - type: web
-#   name: flask-hello-world
-#   runtime: python
-#   repo: https://github.com/render-examples/flask-hello-world
-#   branch: master
-#   plan: free
-#   region: bogus
-#   buildCommand: pip install -r requirements.txt
-#   startCommand: gunicorn app:app
-# - type: redis
-#   name: t3
-#   plan: starter
-#   region: oregon
-#   maxmemoryPolicy: allkeys-lru
-#   ipAllowList: []
+- type: web
+  name: flask-hello-world
+  runtime: python
+  repo: https://github.com/render-examples/flask-hello-world
+  branch: master
+  plan: free
+  region: bogus
+  buildCommand: pip install -r requirements.txt
+  startCommand: gunicorn app:app
+- type: redis
+  name: t3
+  plan: starter
+  region: oregon
+  maxmemoryPolicy: allkeys-lru
+  ipAllowList: []
 # - type: web
 #   name: t55
 #   runtime: python
