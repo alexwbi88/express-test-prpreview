@@ -42,7 +42,7 @@ services:
   startCommand: gunicorn app:app
 - type: redis
   name: t3
-  plan: free
+  plan: starter
   region: oregon
   maxmemoryPolicy: allkeys-lru
   ipAllowList: []
@@ -64,10 +64,10 @@ services:
   plan: starter
   autoDeploy: false # optional
   # maxShutdownDelaySeconds: 60 # seconds
-  disk:
-    name: data
-    mountPath: /data
-    sizeGB: 10 # optional
+  # disk:
+  #   name: data
+  #   mountPath: /data
+  #   sizeGB: 10 # optional
   envVars:
     - key: STRIPE_API_KEY
       value: Z2V0IG91dHRhIGhlcmUhCg
