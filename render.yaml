@@ -58,7 +58,7 @@ services:
   preDeployCommand: bundle exec ruby migrate.rb
   startCommand: bundle exec ruby main.rb
   autoDeploy: false # Disable automatic deploys
-  maxShutdownDelaySeconds: 120 # Increase graceful shutdown period. Default: 30, Max: 300
+  # maxShutdownDelaySeconds: 120 # Increase graceful shutdown period. Default: 30, Max: 300
   domains: # Custom domains
     - example.com
     - www.example.org
@@ -194,7 +194,7 @@ services:
   startCommand: node app.js
   autoDeploy: true # optional
   pullRequestPreviewsEnabled: true # optional
-  plan: false
+  plan: free
 - type: web
   name: new_web_service_test
   runtime: node
@@ -268,7 +268,7 @@ services:
 
 # A Redis instance
 - type: redis
-  name: lightning
+  name: lightning2
   ipAllowList: # Required
     - source: 0.0.0.0/0
       description: everywhere
