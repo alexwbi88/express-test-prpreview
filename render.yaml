@@ -193,7 +193,6 @@ services:
   buildCommand: yarn
   startCommand: node app.js
   plan: free
-  autoDeploy: true # optional
 - type: web
   name: new_web_service_test
   runtime: node
