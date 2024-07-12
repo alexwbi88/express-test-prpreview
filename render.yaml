@@ -118,7 +118,7 @@ services:
     targetCPUPercent: 60 # optional if targetMemory is set
   buildCommand: yarn
   startCommand: node app.js
-  plan: free
+  # plan: free
   autoDeploy: true # optional
 - type: web
   name: bp_test2
