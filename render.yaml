@@ -191,7 +191,6 @@ services:
   startCommand: node app.js
   autoDeploy: true # optional
   pullRequestPreviewsEnabled: true # optional
-  plan: free
 - type: web
   name: new_web_service_test
   runtime: node
@@ -203,6 +202,7 @@ services:
     targetMemoryPercent: 60 # optional if targetCPUPercent is set
     targetCPUPercent: 60 # optional if targetMemory is set
   buildCommand: yarn
+  plan: free
   startCommand: node app.js
   autoDeploy: false # optional
  # A private service with an attached persistent disk
