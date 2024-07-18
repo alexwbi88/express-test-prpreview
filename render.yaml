@@ -1,19 +1,14 @@
-# Exported from Render on 2024-03-18T16:04:03Z
-services:
 - type: web
-  name: bp_test
+  name: new_web_service_test
   runtime: node
-  repo: https://github.com/alexwbi88/express-test-prpreview
-  branch: main
+  # repo: https://github.com/alexwbi88/express-hello-world
+  # repo: https://github.com/alexwbi88/express-hello-world.git
+  scaling:
+    minInstances: 1
+    maxInstances: 3
+    targetMemoryPercent: 60 # optional if targetCPUPercent is set
+    targetCPUPercent: 60 # optional if targetMemory is set
+  buildCommand: yarn
   plan: free
-  envVars:
-  - key: ENV
-    sync: false
-  - key: STRIPE_API_KEY
-    sync: false
-  - fromGroup: mygroup
-  region: oregon
-  buildCommand: yarn && echo foo
   startCommand: node app.js
-  preDeployCommand: bundle exec ruby migrate.rb
-version: "1"
+  autoDeploy: false # optional
