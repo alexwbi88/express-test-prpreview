@@ -54,7 +54,7 @@ const html = `
   </head>
   <body>
     <section>
-      Hello from Render! (im trying to get a pserv without paying)
+      Hello from Render! (did not specify branch in my render.yaml)
     </section>
   </body>
 </html>
